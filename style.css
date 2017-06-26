@@ -1,0 +1,325 @@
+body {
+    
+    width: 100%;
+    overflow-x: hidden;
+    font-family: myarabic;
+    
+}
+h2 {font-size: 40px;font-weight: 600; !importnat}
+
+
+a:hover {color: white}
+
+
+
+.navbar {
+    display: none ;
+}
+
+.navbar-fixed-margin {
+    /* margin-top: 100px; */
+}
+
+.jumbotron {
+    height: 700px;
+    width: 100%;
+    background-color: #5f2c82;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.contentBox {
+    width: 99%;
+    align-content: center;
+}
+
+.row {
+    
+    margin: 4px;
+    display: block;
+    padding-bottom: 8px;
+}
+
+
+@font-face {
+    font-family:myarabic ;
+    src: url(TTF-AraHamah/AraHamah1982-Regular.ttf);
+}
+
+
+
+
+.top-left,.center-left,.bottom-left{float: right ;clear: both; text-align: right;}
+
+
+
+p {
+    line-height: 1.2em;
+    font-size: 30px;
+    text-align:inherit;
+    font-family: myarabic;
+    
+     
+}
+
+/*animation*/
+
+/*left-side*/
+.top-left.in-view {
+    animation: animate-right1 2s 0.5s both ease-out ;
+}
+
+@keyframes animate-right1 {
+    0%{opacity: 0;transform: translate(-300px);}
+    100%{opacity: 1; transform: translate(0px)}
+}
+
+
+.center-left.in-view {
+    animation: animate-right2 2s 0.5s both ease-out ;
+}
+
+@keyframes animate-right2 {
+    0%{opacity: 0;transform: translate(-200px);}
+    100%{opacity: 1; transform: translate(0px)}
+}
+
+.bottom-left.in-view {
+    animation: animate-right3 2s 0.5s both ease-out ;
+}
+
+@keyframes animate-right3 {
+    0%{opacity: 0;transform: translate(-100px);}
+    100%{opacity: 1; transform: translate(0px)}
+}
+
+
+
+/*right-side*/
+.top-right.in-view {
+    animation: animate-left1 2s 0.5s both ease-out ;
+}
+
+@keyframes animate-left1 {
+    0%{opacity: 0;transform: translate(300px);}
+    100%{opacity: 1; transform: translate(0px)}
+}
+
+.center-right.in-view {
+    animation: animate-left2 2s 0.5s both ease-out ;
+}
+
+@keyframes animate-left2 {
+    0%{opacity: 0;transform: translate(200px);}
+    100%{opacity: 1; transform: translate(0px)}
+}
+
+
+.bottom-right.in-view {
+    animation: animate-left3 2s 0.5s both ease-out ;
+}
+
+@keyframes animate-left3 {
+    0%{opacity: 0;transform: translate(100px);}
+    100%{opacity: 1; transform: translate(0px)}
+}
+
+
+
+/*center*/
+
+.center-img.willAnimate.in-view {
+    height: 600px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transform: translateX(50px);
+    animation: shaking 3s 0.5s both linear  ;
+    
+ 
+}
+
+@keyframes shaking {
+     0%{opacity: 0.6; transform: rotate3d(1, 1, 0, 30deg) translateX(50px)}
+    50%{transform: rotate3d(1, 1, 0, 15deg) translateX(50px)}
+    100%{transform: rotate3d(0, 0, 0, 0deg) translateX(50px)}
+}
+
+.egraat {position: relative;}
+
+.dalel-col {
+    
+    text-align: right ;
+    
+    
+    
+}
+
+.dalel-mob {
+    position: relative;
+    
+}
+
+.mobFront {
+    transform: translate(150px);
+    position: absolute;
+    transform-style: preserve-3d;
+    
+   
+}
+.mobBack {
+    transform: scale(0.9);
+    position: absolute;
+    z-index: -1;
+}
+
+
+.mobFront.willAnimate.in-view {
+    animation: animateFrontmob 2s 0.5s both ease-out ;
+    perspective: 1;
+    transform-style: preserve-3d;
+    
+}
+
+@keyframes animateFrontmob {
+    0%{opacity: 0.5;transform: rotateY(45deg) translate(150px)}
+    100%{opacity: 1; transform: rotateY(0deg) translate(150px)}
+}
+
+
+.mobBack.willAnimate.in-view {
+    animation: animateBackmob 1.5s 1.5s both ease-out ;
+    perspective: 1;
+    transform-style: preserve-3d;
+    
+}
+
+@keyframes animateBackmob {
+    0%{opacity: 0;transform:  translate(150px) scale(0.9)}
+    100%{opacity: 1; transform:  translate(0px) scale(0.9)}
+}
+
+
+.headerA.in-view {
+    animation: toLeft 2s both linear;
+}
+
+
+@keyframes toLeft {
+    0%{opacity: 0;transform:  translate(150px) }
+    100%{opacity: 1; transform:  translate(0px) }
+}
+
+.textA.in-view {
+    animation: downWards 2s 0.5s both linear;
+}
+
+
+@keyframes downWards {
+    0%{opacity: 0;transform:  translateY(-150px) }
+    50%{opacity: 0; transform:  translateY(-80px) }
+    100%{opacity: 1; transform:  translateY(0px) }
+}
+
+
+
+
+
+
+
+/*nav start*/
+
+.parent2 {
+  top:15px;
+  left:15px;
+  position:fixed;
+ display:block;
+  width:100px;
+  height:100px;
+  background-color:transparent;
+  border-radius:50%;
+  z-index:20;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.test1 {
+  width:60%;
+  height:60%;
+  background-color:#4b6cb7 ;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    position:absolute;
+     
+}
+
+
+
+.test2 {
+  width:60%;
+  height:60%;
+  background-color:#4b6cb7;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+}
+.test3 {
+  width:60%;
+  height:60%;
+  background-color:#4b6cb7 ;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+    z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+}
+  .test4 {
+  width:60%;
+  height:60%;
+  background-color:#4b6cb7;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+      z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+}
+.mask2 {
+  top:15px;
+  left:15px;
+  width:100px;
+  height:100px;
+  background:#24C6DC;
+  border-radius:50%;
+  position:absolute;
+  z-index:21;
+  color:white;
+  text-align:center;
+  line-height:120px;
+  cursor:pointer;
+  position:fixed;
+}
+
+
+
+
