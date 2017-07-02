@@ -23,15 +23,43 @@ a:hover {color: white}
 .jumbotron {
     height: 700px;
     width: 100%;
-    background-color: #5f2c82;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(images/medical-1572978_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  /* background-color: #5f2c82;  /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+.hamada {
+    margin: 400px;
+    background-color:  rgba(38,170,94,0.5);
+    
+}
+
+.hamada h1{
+   margin: 0; padding: 0;
+   color: #fff;
+   margin: 0 6px;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+
 
 .contentBox {
     width: 99%;
     align-content: center;
+}
+
+.box { 
+    margin-top: 100px;
+    margin-bottom: 50px;
+    min-height: 650px;
+    position: relative;
+    display: block;
 }
 
 .row {
@@ -39,6 +67,8 @@ background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, F
     margin: 4px;
     display: block;
     padding-bottom: 8px;
+    position: relative;
+    display: block;
 }
 
 
@@ -145,22 +175,24 @@ p {
     100%{transform: rotate3d(0, 0, 0, 0deg) translateX(50px)}
 }
 
-.egraat {position: relative;}
+.egraat {position: relative; margin: 70px; clear: both;}
 
-.dalel-col {
+.dalel-co {
     
     text-align: right ;
-    
+    position: relative;
     
     
 }
 
 .dalel-mob {
     position: relative;
+    min-height: 400px;
     
 }
 
 .mobFront {
+   
     transform: translate(150px);
     position: absolute;
     transform-style: preserve-3d;
@@ -168,6 +200,22 @@ p {
    
 }
 .mobBack {
+    
+    transform: scale(0.9);
+    position: absolute;
+    z-index: -1;
+}
+
+.mobFront2 {
+   
+    transform: translate(150px);
+    position: absolute;
+    transform-style: preserve-3d;
+    
+   
+}
+.mobBack2 {
+    
     transform: scale(0.9);
     position: absolute;
     z-index: -1;
@@ -175,6 +223,13 @@ p {
 
 
 .mobFront.willAnimate.in-view {
+    animation: animateFrontmob 2s 0.5s both ease-out ;
+    perspective: 1;
+    transform-style: preserve-3d;
+    
+}
+
+.mobFront2.willAnimate.in-view {
     animation: animateFrontmob 2s 0.5s both ease-out ;
     perspective: 1;
     transform-style: preserve-3d;
@@ -194,6 +249,13 @@ p {
     
 }
 
+.mobBack2.willAnimate.in-view {
+    animation: animateBackmob 1.5s 1.5s both ease-out ;
+    perspective: 1;
+    transform-style: preserve-3d;
+    
+}
+
 @keyframes animateBackmob {
     0%{opacity: 0;transform:  translate(150px) scale(0.9)}
     100%{opacity: 1; transform:  translate(0px) scale(0.9)}
@@ -204,6 +266,10 @@ p {
     animation: toLeft 2s both linear;
 }
 
+.headerA2.in-view {
+    animation: toLeft 2s both linear;
+}
+
 
 @keyframes toLeft {
     0%{opacity: 0;transform:  translate(150px) }
@@ -211,6 +277,10 @@ p {
 }
 
 .textA.in-view {
+    animation: downWards 2s 0.5s both linear;
+}
+
+.textA2.in-view {
     animation: downWards 2s 0.5s both linear;
 }
 
