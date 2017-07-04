@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    
+     $(".hamada").addClass("sliding");
     //chooce elements to animate
     
     var $animation_elements = $('.willAnimate');
@@ -31,7 +33,7 @@ $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
     
    
-    //navbar 
+    //navbar animation
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > $(".jumbotron").height()) {
@@ -44,14 +46,15 @@ $window.trigger('scroll');
         }
     })
     
-    // navbar animation
+    // navbar animation end
+    
+    
     
     
    
 
 
     
-    //navbar end
     
     
     /*nav start*/
@@ -76,6 +79,15 @@ $window.trigger('scroll');
     active4 = !active4;
       
     });
+    
+    /*nav end*/
+    
+    
+   
+       
+  
+    
+    
     
     
     

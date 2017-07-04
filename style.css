@@ -5,7 +5,24 @@ body {
     font-family: myarabic;
     
 }
-h2 {font-size: 40px;font-weight: 600; !importnat}
+
+
+@font-face {
+    font-family:myarabic ;
+    src: url(TTF/flat-jooza-regular.ttf);
+}
+
+h2 {font-size: 30px;font-weight: 600; !importnat}
+
+p {
+    line-height: 1.5em;
+    font-size: 22px;
+    text-align:inherit;
+    font-family: myarabic;
+    color: dimgray;
+    
+     
+}
 
 
 a:hover {color: white}
@@ -17,34 +34,126 @@ a:hover {color: white}
 }
 
 .navbar-fixed-margin {
-    /* margin-top: 100px; */
+    /* margin-top: 100px; */ 
 }
 
 .jumbotron {
+    height: 800px;
+    width: 100%;
+    background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.covermob {
+    position: relative;
+    max-height: 600px;
+    
+   /* animation:shakingcover 3s 0.5s both linear infinite alternate ;*/
+    
+}
+/*@keyframes shakingcover {
+     0%{ transform: rotate3d(0, 1, 0, 30deg) translateX(50px)}
+    50%{transform: rotate3d(0, 1, 0, 15deg) translateX(50px)}
+    100%{transform: rotate3d(0, 0, 0, 0deg) translateX(50px)}
+}*/
+
+
+
+/*.jumbotron {
     height: 700px;
     width: 100%;
-    background-image: url(images/medical-1572978_1920.jpg);
+    background-image: url(images/19106066_469849833366862_1909279843857844435_n.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-  /* background-color: #5f2c82;  /* fallback for old browsers */
-/*background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
-/*background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}*/
 
-}
+
 
 .hamada {
-    margin: 400px;
-    background-color:  rgba(38,170,94,0.5);
-    
+width:500px;
+height: 400px;
+position:relative;
+/*border: 5px solid white;
+border-radius: 50px;*/
+text-transform:uppercase;
+text-align:center;
+letter-spacing: 1.6px;
+margin-top: 0px;
+    padding: 30px;
+    color: white;
+    transform-origin: 20px 20px;
+    top: -400px;
+    left: 30%;
+    animation: droping 0.7s ease both , swinging 0.7s 0.7s linear forwards ;
+
+     
 }
 
-.hamada h1{
-   margin: 0; padding: 0;
-   color: #fff;
-   margin: 0 6px;
-   font-weight: 400;
-   text-transform: uppercase;
+
+
+@keyframes droping {
+    0%{opacity: 0}
+    70%{transform: translateY(550px) rotateZ(40deg) }
+    100%{transform: translateY(500px) rotateZ(40deg);opacity: 1}
+}
+
+@keyframes swinging {
+    0%{transform: translateY(500px) rotateZ(40deg)}
+    50%{transform:translateY(500px) rotateZ(80deg)}
+    70%{transform:translateY(500px) rotateZ(100deg)}
+    80%{transform:translateY(500px) rotateZ(80deg)}
+    90%{transform:translateY(500px) rotateZ(40deg)}
+    100%{transform:translateY(500px) rotateZ(0deg)}
+}
+
+
+/*
+.hamada:before {
+content:"";
+background-color:  rgba(255,255,255,0.9);
+position:absolute;
+border-radius:1px;
+
+top:-50%;
+bottom:-11%;
+left:-150%;
+right:-5%;
+-webkit-transform:perspective(40em) rotateX(-45deg);
+transform:perspective(40em) rotateX(45deg);
+}
+
+.hamada a {
+z-index:999;
+position:relative;
+height: 85px;
+  display: block;
+  padding-top: 25px;
+}
+
+.hamada.sliding {
+     animation: animate-right22 2s 1s both ease-out ;
+}
+
+@keyframes animate-right22 {
+    0%{opacity: 0;transform: translate(-200px);}
+    50%{opacity: 0.5; transform: translate(250px)}
+    100%{opacity: 1; transform: translate(0px)}
+}
+*/
+
+.covermob{
+    
+   z-index: 50 !importnat;
+    display: block;
+    top: 15%;
+    left: 0%;
+    position:absolute;
+    animation: shake 1s 1.5s ;
+   
 }
 
 
@@ -62,9 +171,14 @@ a:hover {color: white}
     display: block;
 }
 
+/*
+.box:nth-child(2) {background-color: green}
+.box:nth-child(3) {background-color: blue}
+.box:nth-child(1) {background-color: yellow}  */
+
 .row {
     
-    margin: 4px;
+    margin:0px 4px 4px 4px;
     display: block;
     padding-bottom: 8px;
     position: relative;
@@ -72,10 +186,7 @@ a:hover {color: white}
 }
 
 
-@font-face {
-    font-family:myarabic ;
-    src: url(TTF-AraHamah/AraHamah1982-Regular.ttf);
-}
+
 
 
 
@@ -84,14 +195,6 @@ a:hover {color: white}
 
 
 
-p {
-    line-height: 1.2em;
-    font-size: 30px;
-    text-align:inherit;
-    font-family: myarabic;
-    
-     
-}
 
 /*animation*/
 
@@ -191,11 +294,27 @@ p {
     
 }
 
+.dalel-co2 {
+    
+    text-align: left;
+    position: relative;
+    float: right;
+    
+    
+}
+
+.dalel-mob2 {
+    position: relative;
+    min-height: 400px;
+    
+}
+
 .mobFront {
    
     transform: translate(150px);
     position: absolute;
     transform-style: preserve-3d;
+    z-index: 50;
     
    
 }
@@ -203,12 +322,12 @@ p {
     
     transform: scale(0.9);
     position: absolute;
-    z-index: -1;
+    z-index: 40;
 }
 
 .mobFront2 {
    
-    transform: translate(150px);
+    transform: translate(0px);
     position: absolute;
     transform-style: preserve-3d;
     
@@ -230,7 +349,7 @@ p {
 }
 
 .mobFront2.willAnimate.in-view {
-    animation: animateFrontmob 2s 0.5s both ease-out ;
+    animation: animateFrontmob2 2s 0.5s both ease-out ;
     perspective: 1;
     transform-style: preserve-3d;
     
@@ -239,6 +358,11 @@ p {
 @keyframes animateFrontmob {
     0%{opacity: 0.5;transform: rotateY(45deg) translate(150px)}
     100%{opacity: 1; transform: rotateY(0deg) translate(150px)}
+}
+
+@keyframes animateFrontmob2 {
+    0%{opacity: 0.5;transform: rotateY(45deg) translate(0px)}
+    100%{opacity: 1; transform: rotateY(0deg) translate(0px)}
 }
 
 
@@ -250,7 +374,7 @@ p {
 }
 
 .mobBack2.willAnimate.in-view {
-    animation: animateBackmob 1.5s 1.5s both ease-out ;
+    animation: animateBackmob2 1.5s 1.5s both ease-out ;
     perspective: 1;
     transform-style: preserve-3d;
     
@@ -259,6 +383,11 @@ p {
 @keyframes animateBackmob {
     0%{opacity: 0;transform:  translate(150px) scale(0.9)}
     100%{opacity: 1; transform:  translate(0px) scale(0.9)}
+}
+
+@keyframes animateBackmob2 {
+    0%{opacity: 0;transform:  translate(0px) scale(0.9)}
+    100%{opacity: 1; transform:  translate(150px) scale(0.9)}
 }
 
 
@@ -292,7 +421,24 @@ p {
 }
 
 
-
+.la2ta {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 2px;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+   /* border: 5px solid lightblue;*/
+    
+   box-shadow:  0px 0px 50px 0px rgba(0,0,0,0.5);
+    
+    
+}
+.la2ta:hover {
+    animation : bounceIn 1s 0.1s;
+}
+img:hover {}
 
 
 
@@ -316,7 +462,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 .test1 {
   width:60%;
   height:60%;
-  background-color:#4b6cb7 ;
+  background-color:rgb(65,188,72) ;
   border-radius:50%;
   position:absolute;
   color:white;
@@ -335,7 +481,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 .test2 {
   width:60%;
   height:60%;
-  background-color:#4b6cb7;
+  background-color:rgb(65,188,72);
   border-radius:50%;
   position:absolute;
   color:white;
@@ -349,7 +495,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 .test3 {
   width:60%;
   height:60%;
-  background-color:#4b6cb7 ;
+  background-color:rgb(65,188,72);
   border-radius:50%;
   position:absolute;
   color:white;
@@ -363,7 +509,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   .test4 {
   width:60%;
   height:60%;
-  background-color:#4b6cb7;
+  background-color:rgb(65,188,72);
   border-radius:50%;
   position:absolute;
   color:white;
@@ -379,7 +525,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   left:15px;
   width:100px;
   height:100px;
-  background:#24C6DC;
+  background:rgb(33,150,243);
   border-radius:50%;
   position:absolute;
   z-index:21;
