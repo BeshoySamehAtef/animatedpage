@@ -152,7 +152,7 @@ height: 85px;
     top: 15%;
     left: 0%;
     position:absolute;
-    animation: shake 1s 1.5s ;
+    animation: shake 1s 1.4s ;
    
 }
 
@@ -407,10 +407,12 @@ height: 85px;
 
 .textA.in-view {
     animation: downWards 2s 0.5s both linear;
+    padding: 50px;
 }
 
 .textA2.in-view {
     animation: downWards 2s 0.5s both linear;
+    padding: 50px;
 }
 
 
